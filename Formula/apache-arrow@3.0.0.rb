@@ -8,6 +8,12 @@ class ApacheArrowAT300 < Formula
   revision 4
   head "https://github.com/apache/arrow.git"
 
+  bottle do
+    root_url "https://ghcr.io/v2/ymatrix-data/dev"
+    rebuild 1
+    sha256 cellar: :any, big_sur: "e289a8a7fb43c8544eabb1ac681f90aee72bb73e2125d5cbc2b8e7ace071f262"
+  end
+
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "llvm@11" => :build
