@@ -37,9 +37,8 @@ class ApacheArrowAT300 < Formula
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
     args = %W[
       -DCMAKE_FIND_PACKAGE_PREFER_CONFIG=TRUE
-      -DCMAKE_BUILD_TYPE=RELEASE
       -DARROW_FILESYSTEM=ON
-      -DARROW_FLIGHT=ON # Not sure whether this is needed or not.
+      -DARROW_FLIGHT=ON
       -DARROW_GANDIVA=ON
       -DARROW_JEMALLOC=ON
       -DARROW_JSON=ON
